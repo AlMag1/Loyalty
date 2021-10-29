@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: colors.blue,
-    fontWeight: '400',
+    // fontWeight: 'normal',
     fontSize: 17,
     maxWidth: 220,
     textAlign: 'center',
@@ -95,13 +95,13 @@ const styles = StyleSheet.create({
   login: {
     color: colors.blue,
     fontSize: 16,
-    fontWeight: '800',
+    fontWeight: 'bold',
     textAlign: 'center',
   },
   signUp: {
     color: colors.white,
     fontSize: 16,
-    fontWeight: '800',
+    fontWeight: 'bold',
     textAlign: 'center',
   },
   alternativeContainer: {
