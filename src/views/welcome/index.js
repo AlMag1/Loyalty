@@ -3,7 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Button } from '../../components';
 import { colors } from '../../variables';
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
+  const { navigate } = navigation;
   return (
     <View style={styles.welcomeContainer}>
       <View style={styles.headingContainer}>
@@ -25,13 +26,13 @@ const Welcome = () => {
         <View style={styles.buttons}>
           <Button
             label="ΣΥΝΔΕΣΗ"
-            onPress={() => console.log('Pressed')}
+            onPress={() => navigate('SignIn')}
             style={{ ...styles.button, ...styles.loginButton }}
             textStyle={styles.login}
           />
           <Button
             label="ΕΓΓΡΑΦΗ"
-            onPress={() => console.log('Pressed')}
+            onPress={() => navigate('SignUp')}
             style={[styles.button, styles.signUpButton]}
             textStyle={styles.signUp}
           />
