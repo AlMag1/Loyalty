@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { Button } from '../../components';
 import { colors } from '../../variables';
 
 const Welcome = () => {
@@ -22,27 +23,29 @@ const Welcome = () => {
           LOGO
         </Text>
         <View style={styles.buttons}>
-          <TouchableOpacity
-            style={[styles.button, styles.loginButton]}
+          <Button
+            label="ΣΥΝΔΕΣΗ"
             onPress={() => console.log('Pressed')}
-          >
-            <Text style={styles.login}>ΣΥΝΔΕΣΗ</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
+            style={{ ...styles.button, ...styles.loginButton }}
+            textStyle={styles.login}
+          />
+          <Button
+            label="ΕΓΓΡΑΦΗ"
+            onPress={() => console.log('Pressed')}
             style={[styles.button, styles.signUpButton]}
-            onPress={() => console.log('Pressed')}
-          >
-            <Text style={styles.signUp}>ΕΓΓΡΑΦΗ</Text>
-          </TouchableOpacity>
+            textStyle={styles.signUp}
+          />
         </View>
         <View style={styles.alternativeContainer}>
           <View style={styles.lines} />
           <Text style={styles.alternativeHeading}>ή</Text>
           <View style={styles.lines} />
         </View>
-        <TouchableOpacity onPress={() => console.log('Pressed')}>
-          <Text style={styles.proceedWithoutLogin}>Συνέχεια χωρίς Σύνδεση</Text>
-        </TouchableOpacity>
+        <Button
+          label="Συνέχεια χωρίς Σύνδεση"
+          onPress={() => console.log('Pressed')}
+          textStyle={styles.proceedWithoutLogin}
+        />
       </View>
     </View>
   );
