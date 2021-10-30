@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Button } from '../../components';
 import { colors } from '../../variables';
 
@@ -27,14 +27,12 @@ const Welcome = ({ navigation }) => {
           <Button
             label="ΣΥΝΔΕΣΗ"
             onPress={() => navigate('SignIn')}
-            style={{ ...styles.button, ...styles.loginButton }}
-            textStyle={styles.login}
+            customStyle={styles.loginButton}
           />
           <Button
             label="ΕΓΓΡΑΦΗ"
             onPress={() => navigate('SignUp')}
-            style={[styles.button, styles.signUpButton]}
-            textStyle={styles.signUp}
+            variant="outlined"
           />
         </View>
         <View style={styles.alternativeContainer}>
@@ -42,11 +40,9 @@ const Welcome = ({ navigation }) => {
           <Text style={styles.alternativeHeading}>ή</Text>
           <View style={styles.lines} />
         </View>
-        <Button
-          label="Συνέχεια χωρίς Σύνδεση"
-          onPress={() => console.log('Pressed')}
-          textStyle={styles.proceedWithoutLogin}
-        />
+        <TouchableOpacity onPress={() => console.log('Pressed')}>
+          <Text style={styles.proceedWithoutLogin}>Συνέχεια χωρίς Σύνδεση</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -58,6 +54,7 @@ const styles = StyleSheet.create({
   welcomeContainer: {
     justifyContent: 'center',
     flex: 1,
+    backgroundColor: colors.white,
   },
   headingContainer: {
     justifyContent: 'center',
@@ -85,25 +82,7 @@ const styles = StyleSheet.create({
     width: 300,
   },
   loginButton: {
-    backgroundColor: colors.white,
     marginBottom: 24,
-  },
-  signUpButton: {
-    backgroundColor: colors.blue,
-    borderWidth: 1,
-    borderColor: colors.white,
-  },
-  login: {
-    color: colors.blue,
-    fontSize: 16,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  signUp: {
-    color: colors.white,
-    fontSize: 16,
-    fontWeight: 'bold',
-    textAlign: 'center',
   },
   alternativeContainer: {
     marginTop: 24,
