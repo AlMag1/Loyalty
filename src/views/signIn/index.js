@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
-import { TextInput, useTheme } from 'react-native-paper';
+import { TextInput } from 'react-native-paper';
+import { useTheme } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
 
 import { Button, Logo } from '../../components';
@@ -11,7 +12,7 @@ const SignIn = ({ navigation }) => {
   const [password, setPassword] = useState('');
   const [isPasswordHidden, setPasswordHidden] = useState(true);
   const [isChecked, setChecked] = useState(false);
-  const { customThemeColors } = useTheme();
+  const { colors } = useTheme();
   const { navigate } = navigation;
 
   return (
@@ -25,7 +26,7 @@ const SignIn = ({ navigation }) => {
           style={styles.input}
           keyboardType="number-pad"
           returnKeyType="done"
-          theme={{ colors: { primary: customThemeColors.greyMid } }}
+          theme={{ colors: { primary: colors.greyMid } }}
         />
         <TextInput
           label="Κωδικός"
@@ -40,7 +41,7 @@ const SignIn = ({ navigation }) => {
           secureTextEntry={isPasswordHidden}
           returnKeyType="done"
           style={styles.input}
-          theme={{ colors: { primary: customThemeColors.greyMid } }}
+          theme={{ colors: { primary: colors.greyMid } }}
         />
       </SafeAreaView>
       <TouchableOpacity onPress={() => console.log('Pressed')}>
@@ -55,7 +56,7 @@ const SignIn = ({ navigation }) => {
         <Ionicons
           name={isChecked ? 'checkbox' : 'square-outline'}
           size={24}
-          color={customThemeColors.blue}
+          color={colors.blue}
         />
         <Text style={styles.checkboxLabel}>Κράτησε με συνδεδεμένο</Text>
       </TouchableOpacity>
