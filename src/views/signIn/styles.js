@@ -18,12 +18,6 @@ export const styles = StyleSheet.create({
     paddingLeft: 16,
     paddingRight: 16,
   },
-  paragraph: {
-    color: appColors.greyMid,
-    fontWeight: 'bold',
-    fontSize: 16,
-    marginBottom: 24,
-  },
   input: {
     marginBottom: 16,
     backgroundColor: appColors.white,

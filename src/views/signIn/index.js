@@ -3,7 +3,7 @@ import { Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
 import { TextInput, useTheme } from 'react-native-paper';
 import { Ionicons } from '@expo/vector-icons';
 
-import { Button } from '../../components';
+import { Button, Logo } from '../../components';
 import { styles } from './styles';
 
 const SignIn = ({ navigation }) => {
@@ -16,14 +16,7 @@ const SignIn = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={{ marginTop: 16, marginBottom: 16, textAlign: 'center' }}>
-        LOGO
-      </Text>
-      <View style={styles.withPaddingLeftRight}>
-        <Text style={styles.paragraph}>
-          Συμπλήρωσε τα παρακάτω στοιχεία για να συνδεθείς
-        </Text>
-      </View>
+      <Logo description="Συμπλήρωσε τα παρακάτω στοιχεία για να συνδεθείς" />
       <SafeAreaView>
         <TextInput
           label="Κινητό"
