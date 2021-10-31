@@ -6,8 +6,9 @@ import { FormField, Logo, Button } from '../../components';
 import { styles } from './styles';
 import fields from './fields';
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
   const { colors } = useTheme();
+  const { navigate } = navigation;
   return (
     <ScrollView style={{ flex: 1, backgroundColor: colors.white }}>
       <View style={styles.container}>
@@ -46,9 +47,9 @@ const SignUp = () => {
           <Text
             style={[styles.blueItalicText, styles.textCenter, styles.noAccount]}
           >
-            Δεν έχεις λογαριασμό;
+            Έχεις ήδη λογαριασμό;
           </Text>
-          <Text style={[styles.textCenter, styles.signUpText]}>ΕΓΓΡΑΦΗ</Text>
+          <Text style={[styles.textCenter, styles.signUpText]}>ΣΥΝΔΕΣΗ </Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
