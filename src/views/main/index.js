@@ -35,6 +35,7 @@ const Main = ({ navigation }) => {
             tabBarIcon: ({ color, size }) => (
               <Ionicons name={screen.icon} color={color} size={size} />
             ),
+            headerStatusBarHeight: 40,
           }}
         />
       ))}
