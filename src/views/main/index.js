@@ -33,6 +33,7 @@ const Main = ({ navigation }) => {
           color: colors.blue,
         },
       }}
+      initialRouteName="Συλλογή"
     >
       {screens.map((screen, index) => (
         <Tab.Screen
