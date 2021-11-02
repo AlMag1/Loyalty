@@ -6,6 +6,7 @@ import MyCard from '../myCard';
 import MyCollection from '../myCollection';
 import MyCoupons from '../myCoupons';
 import AdditionalDetails from '../additionalDetails';
+import { colors } from '../../variables';
 
 const screens = [
   { name: 'Η Κάρτα μου', component: MyCard, icon: 'card-outline' },
@@ -26,7 +27,13 @@ const Tab = createBottomTabNavigator();
 
 const Main = ({ navigation }) => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        headerTitleStyle: {
+          color: colors.blue,
+        },
+      }}
+    >
       {screens.map((screen, index) => (
         <Tab.Screen
           {...screen}

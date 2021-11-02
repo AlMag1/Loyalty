@@ -5,6 +5,7 @@ import { extendTheme, NativeBaseProvider } from 'native-base';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 import { colors } from './variables';
 import { screens } from './utils';
@@ -28,10 +29,19 @@ export default function App() {
       <SafeAreaProvider>
         <NavigationContainer>
           <Stack.Navigator
-            screenOptions={({ route }) => {
+            screenOptions={({ route, navigation }) => {
               return {
                 headerBackTitleVisible: false,
                 gestureEnabled: route.name !== 'Main',
+                headerTintColor: colors.blue,
+                headerLeft: () => (
+                  <Ionicons
+                    name="chevron-back-outline"
+                    color={colors.greyMid}
+                    size={25}
+                    onPress={() => navigation.goBack()}
+                  />
+                ),
               };
             }}
           >
