@@ -15,8 +15,8 @@ const theme = extendTheme({
       baseStyle: {
         borderBottomWidth: 1,
         borderBottomColor: colors.greyMid,
-      }
-    }
+      },
+    },
   },
 });
 
@@ -25,7 +25,14 @@ export default function App() {
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerBackTitleVisible: false }}>
+        <Stack.Navigator
+          screenOptions={({ route }) => {
+            return {
+              headerBackTitleVisible: false,
+              gestureEnabled: route.name !== 'Main',
+            };
+          }}
+        >
           {screens.map((screen, index) => (
             <Stack.Screen key={index} {...screen} />
           ))}

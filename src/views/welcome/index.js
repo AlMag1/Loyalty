@@ -40,7 +40,7 @@ const Welcome = ({ navigation }) => {
           <Text style={styles.alternativeHeading}>ή</Text>
           <View style={styles.lines} />
         </View>
-        <TouchableOpacity onPress={() => console.log('Pressed')}>
+        <TouchableOpacity onPress={() => navigate('Main')}>
           <Text style={styles.proceedWithoutLogin}>Συνέχεια χωρίς Σύνδεση</Text>
         </TouchableOpacity>
       </View>

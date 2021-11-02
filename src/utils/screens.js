@@ -1,4 +1,4 @@
-import { SignIn, SignUp, Welcome } from '../views';
+import { SignIn, SignUp, Welcome, Main } from '../views';
 
 export const screens = [
   {
@@ -15,5 +15,10 @@ export const screens = [
     name: 'SignUp',
     component: SignUp,
     options: { title: 'Εγγραφή' },
+  },
+  {
+    name: 'Main',
+    component: Main,
+    options: { header: () => null },
   },
 ];
