@@ -1,9 +1,14 @@
-import { colors } from "../../variables";
+import { colors } from '../../variables';
 
 export default [
   {
     name: 'personType',
     component: 'select',
+    options: [
+      { label: 'Κύριος', value: 1 },
+      { label: 'Κυρία', value: 2 },
+    ],
+    title: 'Προσφώνηση',
     required: true,
   },
   {
@@ -54,7 +59,7 @@ export default [
   },
   {
     name: 'dob',
-    label: 'Ημερομηνία γέννησης',
+    title: 'Ημερομηνία γέννησης',
     component: 'datepicker',
     required: false,
   },

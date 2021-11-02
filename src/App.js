@@ -10,6 +10,14 @@ import { screens } from './utils';
 
 const theme = extendTheme({
   colors,
+  components: {
+    Select: {
+      baseStyle: {
+        borderBottomWidth: 1,
+        borderBottomColor: colors.greyMid,
+      }
+    }
+  },
 });
 
 export default function App() {
