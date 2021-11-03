@@ -6,3 +6,4 @@ export { default as MyCollection } from './myCollection';
 export { default as Main } from './main';
 export { default as MyCoupons } from './myCoupons';
 export { default as AdditionalDetails } from './additionalDetails';
+export { default as Notifications } from './notifications';

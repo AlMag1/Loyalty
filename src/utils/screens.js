@@ -1,4 +1,4 @@
-import { SignIn, SignUp, Welcome, Main } from '../views';
+import { SignIn, SignUp, Welcome, Main, Notifications } from '../views';
 
 export const screens = [
   {
@@ -15,6 +15,11 @@ export const screens = [
     name: 'SignUp',
     component: SignUp,
     options: { title: 'Εγγραφή' },
+  },
+  {
+    name: 'Notifications',
+    component: Notifications,
+    options: { title: 'Ειδοποιήσεις' },
   },
   {
     name: 'Main',
