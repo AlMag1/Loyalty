@@ -39,7 +39,7 @@ const Main = ({ navigation }) => {
               name="notifications-outline"
               size={25}
               color={colors.greyMid}
-              style={{ marginRight: 25 }}
+              style={{ marginRight: 32 }}
               onPress={() => navigation.navigate('Notifications')}
             />
           ),
