@@ -1,4 +1,11 @@
-import { SignIn, SignUp, Welcome, Main, Notifications } from '../views';
+import {
+  SignIn,
+  SignUp,
+  Welcome,
+  Main,
+  Notifications,
+  InnerCollection,
+} from '../views';
 
 export const screens = [
   {
@@ -20,6 +27,11 @@ export const screens = [
     name: 'Notifications',
     component: Notifications,
     options: { title: 'Ειδοποιήσεις' },
+  },
+  {
+    name: 'InnerCollection',
+    component: InnerCollection,
+    options: { title: 'Συλλογή' },
   },
   {
     name: 'Main',

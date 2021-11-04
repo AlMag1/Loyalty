@@ -5,16 +5,20 @@ import {
   View,
   Image,
   useWindowDimensions,
+  TouchableOpacity,
 } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 import { colors } from '../../variables';
 
-const Card = ({ image }) => {
+const Card = ({ image, onPress }) => {
   const { width } = useWindowDimensions();
 
   return (
-    <View style={[styles.card, { width: width - 64 }]}>
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.card, { width: width - 64 }]}
+    >
       <Image source={image} style={styles.image} />
       <View style={styles.relativeContainer}>
         <View style={styles.absoluteContainer}>
@@ -33,7 +37,7 @@ const Card = ({ image }) => {
           </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

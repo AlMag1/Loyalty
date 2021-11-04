@@ -4,11 +4,11 @@ import { HStack, VStack, Stack, Button } from 'native-base';
 
 import { colors } from '../../variables';
 
-const Tabs = ({ tabs }) => {
+const Tabs = ({ tabs, navigation }) => {
   const [selectedTab, setTab] = useState(2);
   const renderTabComponent = () => {
     const Component = tabs.find(t => t.index === selectedTab).Component;
-    return <Component />;
+    return <Component navigation={navigation} />;
   };
 
   return (
