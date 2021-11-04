@@ -10,7 +10,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 
 import { colors } from '../../variables';
 
-const Benefits = ({ image }) => {
+const Card = ({ image }) => {
   const { width } = useWindowDimensions();
 
   return (
@@ -37,7 +37,7 @@ const Benefits = ({ image }) => {
   );
 };
 
-export default Benefits;
+export default Card;
 
 const styles = StyleSheet.create({
   card: {
