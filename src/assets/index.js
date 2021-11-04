@@ -1,0 +1,1 @@
+export { default as LivingRoomImage } from './images/living-room.jpg';
