@@ -1,12 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import tabs from './tabs';
+import { Tabs } from '../../components';
 
 const MyCollection = () => {
-  return (
-    <View>
-      <Text>my collection</Text>
-    </View>
-  );
+  return <Tabs tabs={tabs} />;
 };
 
 export default MyCollection;
