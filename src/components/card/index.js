@@ -23,8 +23,8 @@ const Card = ({ image, onPress }) => {
       <View style={styles.relativeContainer}>
         <View style={styles.absoluteContainer}>
           <View>
-            <Text style={styles.primaryText}>10 Πόντοι για κάθε 1Ε αγορών</Text>
-            <Text style={styles.secondaryText}>
+            <Text style={styles.primaryText}>10 Πόντοι για κάθε 1€ αγορών</Text>
+            <Text>
               Κέρδισε πόντους και εξαργύρωσε τους!
             </Text>
           </View>
